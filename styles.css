@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+:root {
+  font-family: "Space Grotesk";
+}
+p {
+  color: hsl(0, 0%, 100%);
+  font-size: 18px;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  background-image: url("images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-position: -10%;
+  /* position: fixed; */
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transform: scale(0.8);
+}
+
+#card-front {
+  background-image: url("images/bg-card-front.png");
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.card-back {
+  transform: scale(0.9);
+  max-width: 60%;
+  position: relative;
+}
+.cvc-number {
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 7rem;
+  right: -8rem;
+  margin-top: 0;
+}
+
+#card-front img {
+  max-width: 15%;
+  margin-bottom: 40px;
+}
+
+#card-front #numbers {
+  letter-spacing: 0.5rem;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+#holder-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#holder-details p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.holder-card {
+  border-radius: 5px;
+  padding: 4px 100px 4px 5px;
+}
+
+label {
+  color: hsl(278, 68%, 11%);
+  font-size: x-small;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.last-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#month-year input {
+  border-radius: 5px;
+  padding: 5px 15px 5px 10px;
+  max-width: 10%;
+}
+
+#cvc input {
+  max-width: 60%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+button {
+  font-family: inherit;
+  align-self: center;
+  border-radius: 5px;
+  padding: 8px 7.2rem;
+  border: 0px;
+  max-width: 100%;
+  color: hsl(270, 3%, 87%);
+  background-color: hsl(278, 68%, 11%);
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.complete-section p {
+  color: hsl(279, 6%, 55%);
+  font-size: small;
+}
+
+.complete-section h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.complete-section img {
+  max-width: 17%;
+}
+
+.complete-section {
+  text-align: center;
+  letter-spacing: 1px;
+}

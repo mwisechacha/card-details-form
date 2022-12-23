@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="card-section">
+      <div id="card-front">
+        <img src="images/card-logo.svg" alt="card logo" />
+        <p id="numbers">0000 0000 0000 0000</p>
+
+        <div id="holder-details">
+          <p>Jane Appleseed</p>
+          <p>00/00</p>
+        </div>
+      </div>
+
+      <div class="card-back">
+        <img src="images/bg-card-back.png" alt="back image" />
+        <div class="cvc-number">000</div>
+      </div>
+    </div>
+
+    <div id="main-section">
+      <div class="fill-details">
+        <form>
+          <label for="CardHolder name ">CARDHOLDER NAME</label><br />
+          <input
+            class="holder-card"
+            id="holder-name"
+            type="text"
+            placeholder="e.g. Jane Appleseed"
+          /><br />
+
+          <label for="card number">CARD NUMBER</label><br />
+          <input
+            class="holder-card"
+            id="card-name"
+            type="text"
+            placeholder="e.g. 1234 5678 9123 0000"
+          /><br />
+
+          <div class="last-form">
+            <div id="month-year">
+              <label for="month and year">Exp. Date (MM/YY)</label><br />
+              <input type="text" placeholder="MM" />
+              <input type="text" placeholder="YY" />
+            </div>
+            <div id="cvc">
+              <label for="cvc">CVC</label><br />
+              <input type="text" placeholder="e.g. 123" />
+            </div>
+          </div>
+        </form>
+
+        <button id="confirm-button">Confirm</button>
+      </div>
+
+      <!-- Completed state start -->
+      <div class="complete-section hidden">
+        <img src="images/icon-complete.svg" alt="complete icon" />
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Chacha</a>.
+    </div> -->
+    <script src="main.js"></script>
+  </body>
+</html>
