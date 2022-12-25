@@ -34,45 +34,63 @@ body {
   transform: scale(0.8);
 }
 
-#card-front {
-  background-image: url("images/bg-card-front.png");
-  padding: 1.5rem;
-  border-radius: 5px;
-}
-
 .card-back {
-  transform: scale(0.9);
-  max-width: 60%;
+  /* transform: scale(0.9); */
+  /* max-width: %; */
   position: relative;
+  right: -5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-.cvc-number {
+#cvc-number {
   color: hsl(0, 0%, 100%);
   position: absolute;
   top: 7rem;
-  right: -8rem;
+  right: 3.4rem;
   margin-top: 0;
 }
 
-#card-front img {
-  max-width: 15%;
-  margin-bottom: 40px;
+.image-1 {
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-#card-front #numbers {
+.image-2 {
+  position: absolute;
+  max-width: 15%;
+  top: 1.5rem;
+  right: 22rem;
+}
+
+.card-front #numbers {
+  position: absolute;
+  top: 7.5rem;
+  right: 1.4rem;
+  font-size: 1.4rem;
   letter-spacing: 0.5rem;
   font-weight: 200;
-  font-size: 18px;
 }
 
-#holder-details {
+.holder-details {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#holder-details p {
-  margin-bottom: 0;
-  margin-top: 0;
+.holder-details #name {
+  position: absolute;
+  top: 12.5rem;
+  right: 18.8rem;
+  color: hsl(270, 3%, 87%);
+  text-transform: uppercase;
+}
+
+#date {
+  position: relative;
+  top: -3rem;
+  right: -22.5rem;
+  color: hsl(270, 3%, 87%);
 }
 
 #main-section {
@@ -121,7 +139,7 @@ input {
   /* border: 0; */
   border-color: hsl(270, 3%, 87%);
   border: solid hsl(270, 3%, 87%);
-  transition: 3s;
+  transition: 0.3s;
 }
 
 input:hover {
@@ -144,7 +162,10 @@ input[type="text"]:focus {
   border-color: hsl(0, 100%, 66%);
 }
 
-.input-controls .error {
+#name-error,
+#cvc-error,
+#card-num-error,
+#date-expiry-error {
   color: hsl(0, 100%, 66%);
   font-family: inherit;
   font-size: small;
@@ -184,4 +205,7 @@ button {
 .complete-section {
   text-align: center;
   letter-spacing: 1px;
+}
+
+@media screen {
 }
