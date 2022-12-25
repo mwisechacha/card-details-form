@@ -12,10 +12,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 100px;
-  background-image: url("images/bg-main-desktop.png");
-  background-repeat: no-repeat;
-  background-position: -10%;
-  /* position: fixed; */
+}
+
+.desktop-bg {
+  position: absolute;
+  top: -7rem;
+  left: -10rem;
 }
 
 .attribution {
@@ -39,6 +41,7 @@ body {
   /* max-width: %; */
   position: relative;
   right: -5rem;
+  border: 0;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -93,7 +96,7 @@ body {
   color: hsl(270, 3%, 87%);
 }
 
-#main-section {
+.main-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,6 +209,69 @@ button {
   text-align: center;
   letter-spacing: 1px;
 }
+.hide {
+  display: none;
+}
 
-@media screen {
+@media (max-width: 50em) {
+  body {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .show {
+    display: none;
+  }
+  .hide {
+    display: initial;
+  }
+  .mobile-bg {
+    position: relative;
+    top: -8.5rem;
+    right: -18rem;
+    width: 42rem;
+    height: 23rem;
+  }
+  .card-back {
+    top: -45em;
+    /* z-index: -1; */
+    right: -20em;
+  }
+  .image-1 {
+    top: -18.5em;
+    right: -21em;
+    z-index: 1;
+  }
+
+  .image-2 {
+    z-index: 1;
+    right: 14rem;
+    top: 6rem;
+  }
+  .card-front #numbers {
+    z-index: 1;
+    right: -6rem;
+    top: 12rem;
+  }
+  .holder-details #name {
+    z-index: 1;
+    right: 11rem;
+    top: 17rem;
+  }
+
+  #date {
+    z-index: 1;
+    right: -44rem;
+    top: -21.8rem;
+  }
+  .main-section {
+    gap: 0px;
+  }
+
+  .main-section {
+    align-self: baseline;
+  }
 }
