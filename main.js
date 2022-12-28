@@ -44,7 +44,10 @@ cardNumber.addEventListener("keyup", (e) => {
   if (cardNumberValue.length === 0) {
     numberError.innerHTML = "Can't be blank";
   } else if (keyNumbers) {
-    number.innerHTML = cardNumberValue;
+    number.innerHTML = cardNumberValue
+      .replace(/[^\dA-Z]/g, "")
+      .replace(/(.{4})/g, "$1")
+      .trim();
   } else {
     numberError.innerHTML = "Wrong Format, numbers only!";
   }
@@ -60,7 +63,7 @@ month.addEventListener("keyup", (e) => {
   const monthValue = e.target.value;
   const monthValueNumbers = monthValue.match(/^[0-9]*$/);
 
-  if (monthValueNumbers === "") {
+  if (monthValueNumbers.length === 0) {
     expiryError.innerHTML = "Can't be blank";
   } else if (monthValueNumbers) {
     monthDate.innerHTML = monthValue;
@@ -73,7 +76,7 @@ year.addEventListener("keyup", (e) => {
   const yearValue = e.target.value;
   const yearValueNumbers = yearValue.match(/^[0-9]*$/);
 
-  if (yearValueNumbers === "") {
+  if (yearValueNumbers.length === 0) {
     expiryError.innerHTML = "Can't be blank";
   } else if (yearValueNumbers) {
     yearDate.innerHTML = yearValue;
@@ -85,7 +88,7 @@ cvcNumber.addEventListener("keyup", (e) => {
   const cvcValue = e.target.value;
   const cvcValueNumbers = cvcValue.match(/^[0-9]*$/);
 
-  if (cvcValueNumbers === "") {
+  if (cvcValueNumbers.length === 0) {
     cvcError.innerHTML = "Can't be blank";
   } else if (cvcValueNumbers) {
     cvcCard.innerHTML = cvcValue;
@@ -101,8 +104,8 @@ confirmButton.addEventListener("click", () => {
     numberError.innerHTML = "Please enter card number";
   } else if (month.value.length <= 0 || year.value.length <= 0) {
     expiryError.innerHTML = "Please enter card expiry date";
-    // } else if (cvcCard.value.length <= 0) {
-    //   cvcError.innerHTML = "Please enter your cvc";
+  } else if (cvcNumber.value.length <= 0) {
+    cvcError.innerHTML = "Please enter your cvc";
   } else {
     detailsSection.classList.add("hidden");
     confirmSection.classList.remove("hidden");

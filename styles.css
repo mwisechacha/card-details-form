@@ -274,4 +274,8 @@ button {
   .main-section {
     align-self: baseline;
   }
+  .card-section {
+    /* align-items: flex-end;
+    justify-content: flex-end; */
+  }
 }
