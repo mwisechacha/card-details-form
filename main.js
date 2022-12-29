@@ -24,12 +24,12 @@ const cvcError = document.getElementById("cvc-error");
 holderName.addEventListener("keyup", (e) => {
   const holderNameValue = holderName.value;
   let keyPress = e.key;
-  // let keyLetters = keyPress.match(/^[A-Za-z]*$/);
+  // let keyLetters = keyPress.match(/^[A-Za-z]+$/);
 
   if (holderNameValue.length === 0) {
     nameError.innerHTML = "Can't be blank";
   }
-  // else if (keyLetters) {
+  // } else if (keyLetters) {
   //   nameOfHolder.innerHTML = holderNameValue;
   // }
   else {
@@ -40,14 +40,11 @@ holderName.addEventListener("keyup", (e) => {
 cardNumber.addEventListener("keyup", (e) => {
   const cardNumberValue = cardNumber.value;
   let keyPress = e.key;
-  let keyNumbers = keyPress.match(/^[0-9]*$/);
+  let keyNumbers = keyPress.match(/^\d+/);
   if (cardNumberValue.length === 0) {
     numberError.innerHTML = "Can't be blank";
   } else if (keyNumbers) {
-    number.innerHTML = cardNumberValue
-      .replace(/[^\dA-Z]/g, "")
-      .replace(/(.{4})/g, "$1")
-      .trim();
+    number.innerHTML = cardNumberValue.match(/.{1,4}/g).join(" ");
   } else {
     numberError.innerHTML = "Wrong Format, numbers only!";
   }
