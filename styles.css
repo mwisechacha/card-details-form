@@ -219,7 +219,7 @@ button {
   display: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 50em) {
   body {
     gap: 0;
     margin: 0;
@@ -243,44 +243,44 @@ button {
   }
 
   .card-back {
-    top: -45em;
+    bottom: 56em;
     /* z-index: -1; */
-    right: -5em;
+    right: 1em;
   }
 
   .image-1 {
-    top: -19.5em;
-    right: 2em;
+    bottom: 30.4em;
+    right: 7em;
     z-index: 1;
   }
 
   .image-2 {
     z-index: 1;
-    left: 0.1rem;
-    top: 6rem;
+    left: -5rem;
+    top: -28em;
   }
 
   .card-front #numbers {
     z-index: 1;
-    left: 0.3rem;
-    top: -15rem;
+    left: -5rem;
+    top: -16em;
   }
 
   .holder-details #name {
     z-index: 1;
-    left: 0.2rem;
-    top: -7rem;
+    left: -5em;
+    top: -18em;
     max-width: 15ch;
   }
 
   #date {
     z-index: 1;
-    right: -21rem;
-    top: -22.8rem;
+    left: 16em;
+    top: -33.5em;
   }
 
   #cvc-number {
-    right: 9rem;
+    right: 6rem;
   }
 
   .main-section {
@@ -298,9 +298,9 @@ button {
 
   .card-section {
     min-height: 0vh;
-    max-height: 60vh;
+    max-height: 1vh;
   }
   .cards {
-    transform: scale(0.9);
+    transform: scale(0.7);
   }
 }
